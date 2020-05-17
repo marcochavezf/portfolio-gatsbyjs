@@ -4,11 +4,8 @@ import { graphql } from 'gatsby'
 import React from 'react'
 import Helmet from 'react-helmet'
 import About from 'sections/about'
-import Contact from 'sections/contact'
 import Hero from 'sections/hero'
 import Portfolio from 'sections/portfolio'
-import Services from 'sections/services'
-import Testimonials from 'sections/testimonials'
 
 class HomePage extends React.Component {
 
@@ -23,10 +20,10 @@ class HomePage extends React.Component {
         <Layout>
             <Hero id="home" />
             <About id="about" />
-            <Services id="services" />
+            {/* <Services id="services" /> */}
             <Portfolio id="portfolio" />
-            <Testimonials id="testimonials" />
-            <Contact id="contact" />
+            {/* <Testimonials id="testimonials" /> */}
+            {/* <Contact id="contact" /> */}
         </Layout>
         <Spinner duration={1000} />
       </div>

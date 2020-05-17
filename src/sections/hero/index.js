@@ -1,10 +1,10 @@
-import React from 'react'
-import './styles.scss'
-import { StaticQuery, graphql } from 'gatsby'
-import { Row, Col } from 'react-bootstrap'
 import Glitch from 'components/glitch'
+import { graphql, StaticQuery } from 'gatsby'
+import React from 'react'
+import { Col, Row } from 'react-bootstrap'
 import Typewriter from 'typewriter-effect'
 import ThemeContext from '../../context'
+import './styles.scss'
 class Hero extends React.Component {
 
   static contextType = ThemeContext
@@ -22,20 +22,20 @@ class Hero extends React.Component {
               <div className="line-text">
                 <h4>Hello, I'm</h4>
               </div>
-              <Glitch text="John Neo" />
+              <Glitch text="Marco Chávez" />
               <Typewriter
                 options={{
                   strings: [
-                    'UI/UX Designer',
-                    'PHP Developer',
-                    'Mobile App Expert',
+                    'Software Engineer',
+                    'Sr. Web Developer',
+                    'Doer',
                   ],
                   autoStart: true,
                   loop: true,
                 }}
               />
               <button className="hover-button">
-                  <span>Download CV</span>
+                <span>Download CV</span>
               </button>
             </div>
             {this.icons()}

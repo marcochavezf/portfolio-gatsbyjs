@@ -38,7 +38,8 @@
                 color: #eee;
                 font-family: Poppins;
                 font-size: 14px;
-                margin-top: 20px;
+                margin-top: 10px;
+                margin-bottom: 30px;
                 font-weight: 300;
             }
             .social_icons {
@@ -78,6 +79,16 @@
                 @media (max-width: 991px) {
                     max-width: 100%;
                     margin-top: 20px;
+                }
+            }
+            .technologies {
+                margin-top: 20px;
+                font-size: 12px;
+                font-family: Poppins;
+                color: #fff;
+                max-width: 80%;
+                @media (max-width: 991px) {
+                    max-width: 100%;
                 }
             }
         }

@@ -1,8 +1,8 @@
 {
-  "name": "retro-template",
-  "description": "Retro - One Page Modern Resume Template",
+  "name": "portfolio-gatsby",
+  "description": "Portfolio - Marco Chávez",
   "version": "1.0.0",
-  "author": "Syed Muaz Ali",
+  "author": "Marco Chávez",
   "private": true,
   "dependencies": {
     "@fortawesome/free-regular-svg-icons": "^5.12.1",
@@ -60,7 +60,6 @@
     "react-helmet": "5.2.1"
   },
   "keywords": [
-    "retro",
     "portfolio"
   ],
   "main": "n/a",

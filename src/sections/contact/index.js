@@ -1,9 +1,9 @@
-import React from 'react'
-import './styles.scss'
-import { Row, Col } from 'react-bootstrap'
 import AnimationContainer from 'components/animation-container'
 import BaffleText from 'components/baffle-text'
+import React from 'react'
+import { Col, Row } from 'react-bootstrap'
 import ThemeContext from '../../context'
+import './styles.scss'
 
 class Contact extends React.Component {
     constructor(props) {
