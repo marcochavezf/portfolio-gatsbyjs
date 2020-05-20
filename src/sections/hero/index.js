@@ -93,7 +93,7 @@ export default props => (
             }
           }
         }
-        Img: file(relativePath: { eq: "person.jpg" }) {
+        Img: file(relativePath: { eq: "profile.jpg" }) {
           childImageSharp {
             fluid(maxWidth: 2000) {
               src

@@ -30,13 +30,13 @@ class Hero extends React.Component {
                 <span>About my current job:</span>
               </div>
               <p>
-              I'm working as sr. web developer in Primotus (a configurable workflow platform company) since March 2016, the technologies I use are Angular, AngularJs, Ionic v1, NgRx(Redux), Node.js, PostgreSQL, and a little bit of Scala. Some of my responsibilities are: Review PRs, Maintain and redesign legacy code, create new modules (on my own or with the collaboration of my teammates), bring up to speed new team members, and manage Google Play and App Store apps for beta testing and production.
+              I'm working as sr. web developer in Primotus (a configurable workflow platform company) since March 2016, the technologies I use are Angular, AngularJs, Ionic v1, NgRx(Redux), Node.js, PostgreSQL, and a little bit of Scala. Some of my responsibilities are: maintain and redesign legacy code, create new modules (on my own or with the collaboration of my teammates),  PR review, bring up to speed new team members, and manage Google Play and App Store apps for beta testing and production.
               </p>
               <div className="line-text">
                 <span>About my (unsuccessful) startup company:</span>
               </div>
               <p>
-              I co-founded an on-demand delivery company called Kangou, we were processing an average of 100 deliveries per day in Mexico City, I was in charge of the technology (CTO), we raised seed capital from angel investors and we're invited by the IDB to participate in the Demand Solutions program in Washington D.C.
+              I co-founded an on-demand delivery company called Kangou and I was in charge of the technology (CTO). We were processing an average of 100 deliveries per day in Mexico City, we raised seed capital from angel investors and we were invited by the IDB to participate in the Demand Solutions program in Washington D.C.
               </p>
               {/* <div className="line-text">
                 <span>Miscellaneous data about me:</span>
@@ -65,7 +65,8 @@ class Hero extends React.Component {
               <Progress name="Scala & Play Framework" value={70} delay={1100} />
             </div>
             <span class="technologies">
-            Other programming languages/frameworks and technologies I’ve used:  Java (AndEngine), C, C++ (Cocos2dx), Ruby (Sinatra), Python, Clojure, F#, PHP, Lua (Corona), C# (Xamarin), Javascript/Typescript, Scala (Play), MongoDB, Firebase, MySQL, SQLite, PostgreSQL.            </span>
+            Programming languages/frameworks and technologies that I’ve used in previous projects:  Java (AndEngine), C, C++ (Cocos2dx), Ruby (Sinatra), Python, Clojure, F#, PHP, Lua (Corona), C# (Xamarin), Javascript/Typescript, Scala (Play), MongoDB, Firebase, MySQL, SQLite, PostgreSQL.
+            </span>
           </Col>
         </Row>
       </section>
