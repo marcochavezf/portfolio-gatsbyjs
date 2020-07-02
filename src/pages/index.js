@@ -21,7 +21,7 @@ class HomePage extends React.Component {
             <Hero id="home" />
             <About id="about" />
             {/* <Services id="services" /> */}
-            <Portfolio id="portfolio" />
+            <Portfolio id="projects" />
             {/* <Testimonials id="testimonials" /> */}
             {/* <Contact id="contact" /> */}
         </Layout>

@@ -1,6 +1,6 @@
+import 'animate.css/animate.css'
 import React from 'react'
 import handleViewport from 'react-in-viewport'
-import 'animate.css/animate.css'
 
 class Animation_Container extends React.Component {
 
@@ -34,7 +34,15 @@ class Animation_Container extends React.Component {
       render() {
         const { children, animation, id, height } = this.props
         return (
-            <div className={this.state.classChanged ? `animated ${animation}` : ""} style={{opacity: this.state.classChanged ? 1 : 0, height: height ? height : "auto"}} id={id} >
+            <div 
+                className={this.state.classChanged ? `animated ${animation}` : ""} 
+                style={{
+                    opacity: this.state.classChanged ? 1 : 0, 
+                    height: height ? height : "auto",
+                    backgroundColor: '#eee'
+                }} 
+                id={id} 
+            >
                 {children}
             </div>
         );

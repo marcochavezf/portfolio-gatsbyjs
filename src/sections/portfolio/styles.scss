@@ -70,7 +70,7 @@
                         width: 100%;
                         top: 0;
                         .overlay {
-                            display: flex;
+                            display: grid;
                             justify-content: center;
                             align-items: center;
                             height: 100%;
@@ -82,11 +82,21 @@
                             width: 80%;
                             background-color: #eb83f8;
                             opacity: 0;
+                            padding: 5px;
                             span {
                                 z-index: 100;
                                 color: #fff;
                                 font-size: 20px;
                                 text-align: center;
+                            }
+                            .title {
+                                text-decoration: underline;
+                            }
+                            .summary {
+                                font-size: 15px;
+                            }
+                            .technologies {
+                                font-size: 16px;
                             }
                         }
                         &:hover > .overlay {
@@ -156,5 +166,9 @@
                 }
             }
         }
+    }
+    .toast-background {
+        background-color: #251170;
+        text-align: center;
     }
 }

@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: 'Portfolio - Marco Chávez',
+    title: 'Marco Chávez',
     description: '',
   },
   pathPrefix: '/',
@@ -31,8 +31,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/content/portfolio/`,
-        name: 'portfolio',
+        path: `${__dirname}/content/projects/`,
+        name: 'projects',
       },
     },
     {

@@ -55,16 +55,16 @@ class Hero extends React.Component {
               <h4>My Skills (in the last 5 years)</h4>
             </div>
             <div className="skills-container">
-              <Progress name="Angular" value={100} delay={1100} />
+              <Progress name="Angular" value={95} delay={1100} />
               <Progress name="AngularJs & Ionic v1" value={100} delay={1100} />
               <Progress name="React" value={80} delay={1100} />
               <Progress name="Redux/NgRx" value={90} delay={1100} />
-              <Progress name="Node.js" value={100} delay={1100} />
+              <Progress name="Node.js" value={85} delay={1100} />
               <Progress name="SQL" value={80} delay={1100} />
               <Progress name="CSS/SCSS" value={80} delay={1100} />
               <Progress name="Scala & Play Framework" value={70} delay={1100} />
             </div>
-            <span class="technologies">
+            <span className="technologies">
             Programming languages/frameworks and technologies that I’ve used in previous projects:  Java (AndEngine), C, C++ (Cocos2dx), Ruby (Sinatra), Python, Clojure, F#, PHP, Lua (Corona), C# (Xamarin), Javascript/Typescript, Scala (Play), MongoDB, Firebase, MySQL, SQLite, PostgreSQL.
             </span>
           </Col>

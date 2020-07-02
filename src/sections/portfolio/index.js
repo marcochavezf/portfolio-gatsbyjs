@@ -1,33 +1,47 @@
-import React from 'react'
-import { StaticQuery, graphql } from 'gatsby'
-import './styles.scss'
-import { Row, Col } from 'react-bootstrap'
 import AnimationContainer from 'components/animation-container'
 import BaffleText from 'components/baffle-text'
+import { graphql, StaticQuery } from 'gatsby'
+import React from 'react'
+import { Col, Row } from 'react-bootstrap'
 import Tilt from 'react-tilt'
+import { Flip, toast, ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import ThemeContext from '../../context'
+import './styles.scss'
 class Portfolio extends React.Component {
   constructor(props) {
     super(props)
     const { items } = this.props
+    // const defaultCategory = null;
+    const defaultCategory =  items[0].content.frontmatter.category;
     this.state = {
-      category: null,
-      col:
-        items.length > 6
-          ? 4
-          : items.length > 4
-          ? 3
-          : items.length > 3
-          ? 2
-          : items.length > 1
-          ? 2
-          : 1,
+      // category: null, // show all categories
+      category:defaultCategory ,
+      col: this.getColPerCategory(items, defaultCategory),
       items: this.props.items,
       showPortfolio: false,
     }
     this.showPortfolio = this.showPortfolio.bind(this)
   }
   static contextType = ThemeContext
+
+  notify({ title, link }){
+    if (link) {
+      Object.assign(document.createElement('a'), { target: '_blank', href: link}).click();
+    } else {
+      toast.dark(`Demo not available for ${ title }`, {
+        position: "top-center",
+        autoClose: 3000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        className: 'toast-background',
+        transition: Flip
+      });
+    }
+  }
 
   showPortfolio() {
     this.setState({ showPortfolio: true })
@@ -44,7 +58,7 @@ class Portfolio extends React.Component {
           <Col md={2} className="side">
             <h2>
               <BaffleText
-                text="Portfolio"
+                text="Projects"
                 revealDuration={500}
                 revealDelay={500}
                 parentMethod={this.showPortfolio}
@@ -54,14 +68,14 @@ class Portfolio extends React.Component {
           </Col>
           <Col md={10} className="recent-works">
             <div className="portfolio_selector">
-              <button
+              {/* <button
                 className="portfolio_category"
                 onClick={() => this.changeCategory(null)}
               >
                 <span className={`${!this.state.category ? 'active' : ''}`}>
                   All
                 </span>
-              </button>
+              </button> */}
               {this.categories()}
             </div>
 
@@ -80,6 +94,7 @@ class Portfolio extends React.Component {
             </div>
           </Col>
         </Row>
+        <ToastContainer />
       </section>
     )
   }
@@ -88,11 +103,12 @@ class Portfolio extends React.Component {
     if (this.state.showPortfolio || this.context.height === 'auto') {
       const { items } = this.state
       return items.map((value, index) => {
+        const {frontmatter } = value.content;
         if (
-          value.content.frontmatter.category === this.state.category ||
+          frontmatter.category === this.state.category ||
           !this.state.category
         ) {
-          if (value.content.frontmatter.image) {
+          if (frontmatter.image) {
             return (
               <div
                 className="portfolio_item"
@@ -113,7 +129,7 @@ class Portfolio extends React.Component {
                 <AnimationContainer delay={200} animation="fadeIn" key={index}>
                   <img
                     src={
-                      value.content.frontmatter.image.childImageSharp.fluid.src
+                      frontmatter.image.childImageSharp.fluid.src
                     }
                     alt={value.content.frontmatter.title}
                     style={{
@@ -128,9 +144,15 @@ class Portfolio extends React.Component {
                     }}
                   />
                   <Tilt className="Tilt" options={{ scale: 1, max: 50 }}>
-                    <div className="overlay">
+                    <div className="overlay" onClick={() => this.notify(frontmatter)}>
                       <span className="title">
-                        {value.content.frontmatter.title}
+                        {frontmatter.title}
+                      </span>
+                      <span className="summary">
+                        {frontmatter.summary}
+                      </span>
+                      <span className="technologies">
+                        {frontmatter.technologies}
                       </span>
                     </div>
                   </Tilt>
@@ -155,16 +177,19 @@ class Portfolio extends React.Component {
   changeCategory(category) {
     const { items } = this.props
     this.setState({ items: [] })
+    this.setState({ category: category, col: this.getColPerCategory(items, category) })
+    setTimeout(() => {
+      this.setState({ items: items })
+    }, 50)
+  }
+
+  getColPerCategory(items, category) {
     let total = 0
     items.forEach(v => {
       if (v.content.frontmatter.category === category || !category) total++
     })
     let col = total > 6 ? 4 : total > 4 ? 3 : total > 3 ? 2 : total > 1 ? 2 : 1
-
-    this.setState({ category: category, col: col })
-    setTimeout(() => {
-      this.setState({ items: items })
-    }, 50)
+    return col;
   }
 
   categories() {
@@ -194,9 +219,7 @@ export default props => (
   <StaticQuery
     query={graphql`
           query {
-            items: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(portfolio)/"}}, sort: {fields: [frontmatter___id], order: ASC}, 
-            # The layout is built for 6 portfolio items #
-            limit: 6) {
+            items: allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(projects)/"}}, sort: {fields: [frontmatter___id], order: ASC}) {
               edges {
                 content: node {
                   html
@@ -204,6 +227,9 @@ export default props => (
                     id
                     title
                     category
+                    technologies
+                    summary
+                    link
                     image {
                       childImageSharp {
                         fluid(maxWidth: 2000, maxHeight: 2000) {
