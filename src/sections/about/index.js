@@ -25,12 +25,13 @@ class Hero extends React.Component {
               {/* <h3>I'm a Full Stack web developer working from home</h3> */}
               {/* <div className="separator" /> */}
               <p>
-              I've been coding for 15 years and I have 8 years of experience working on enterprise applications. I co-founded a startup company 6 years ago and in my spare time I like to I build side projects that can provide value to other people.              </p>
+              I've been coding for 15 years and I have 8 years of experience working on enterprise applications. I co-founded a startup company 6 years ago and in my spare time I like to build side projects that can provide value to other people.
+              </p>
               <div className="line-text">
                 <span>About my current job:</span>
               </div>
               <p>
-              I'm working as sr. web developer in Primotus (a configurable workflow platform company) since March 2016, the technologies I use are Angular, AngularJs, Ionic v1, NgRx(Redux), Node.js, PostgreSQL, and a little bit of Scala. Some of my responsibilities are: maintain and redesign legacy code, create new modules (on my own or with the collaboration of my teammates),  PR review, bring up to speed new team members, and manage Google Play and App Store apps for beta testing and production.
+              I'm working as sr. web developer in Primotus (a configurable workflow platform company) since March 2016, the technologies I use are Angular, AngularJs, Ionic v1, NgRx(Redux), Node.js, PostgreSQL, and a little bit of Scala. Some of my responsibilities are: maintain and redesign legacy code, create new modules (on my own or with the collaboration of my teammates), PR review, bring up to speed new team members, and manage Google Play and App Store apps for beta testing and production.
               </p>
               <div className="line-text">
                 <span>About my (unsuccessful) startup company:</span>
