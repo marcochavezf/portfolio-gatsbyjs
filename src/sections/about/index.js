@@ -25,19 +25,19 @@ class Hero extends React.Component {
               {/* <h3>I'm a Full Stack web developer working from home</h3> */}
               {/* <div className="separator" /> */}
               <p>
-              I've been coding for 15 years and I have 8 years of experience working on enterprise applications. I co-founded a startup company 6 years ago and in my spare time I like to build side projects that can provide value to other people.
+                I've been coding for 15 years and I have 8 years of experience working on enterprise applications. I co-founded a startup company 6 years ago and in my spare time I like to build side projects that can provide value to other people.
               </p>
               <div className="line-text">
                 <span>About my current job:</span>
               </div>
               <p>
-              I'm working as sr. web developer in Primotus (a configurable workflow platform company) since March 2016, the technologies I use are Angular, AngularJs, Ionic v1, NgRx(Redux), Node.js, PostgreSQL, and a little bit of Scala. Some of my responsibilities are: maintain and redesign legacy code, create new modules (on my own or with the collaboration of my teammates), PR review, bring up to speed new team members, and manage Google Play and App Store apps for beta testing and production.
+                I'm working as sr. web developer in Primotus (a configurable workflow platform company) since March 2016, the technologies I use are Angular, AngularJs, Ionic v1, NgRx(Redux), Node.js, PostgreSQL, and a little bit of Scala. Some of my responsibilities are: maintain and redesign legacy code, create new modules (on my own or with the collaboration of my teammates), PR review, bring up to speed new team members, and manage Google Play and App Store apps for beta testing and production.
               </p>
               <div className="line-text">
                 <span>About my (unsuccessful) startup company:</span>
               </div>
               <p>
-              I co-founded an on-demand delivery company called Kangou and I was in charge of the technology (CTO). We were processing an average of 100 deliveries per day in Mexico City, we raised seed capital from angel investors and we were invited by the IDB to participate in the Demand Solutions program in Washington D.C.
+                I co-founded an on-demand delivery company called Kangou and I was in charge of the technology (CTO). We were processing an average of 100 deliveries per day in Mexico City, we raised seed capital from angel investors and we were invited by the IDB to participate in the Demand Solutions program in Washington D.C.
               </p>
               {/* <div className="line-text">
                 <span>Miscellaneous data about me:</span>
@@ -63,10 +63,10 @@ class Hero extends React.Component {
               <Progress name="Node.js" value={85} delay={1100} />
               <Progress name="SQL" value={80} delay={1100} />
               <Progress name="CSS/SCSS" value={80} delay={1100} />
-              <Progress name="Scala & Play Framework" value={70} delay={1100} />
+              <Progress name="Scala & Play Framework" value={60} delay={1100} />
             </div>
             <span className="technologies">
-            Programming languages/frameworks and technologies that I’ve used in previous projects:  Java (AndEngine), C, C++ (Cocos2dx), Ruby (Sinatra), Python, Clojure, F#, PHP, Lua (Corona), C# (Xamarin), Javascript/Typescript, Scala (Play), MongoDB, Firebase, MySQL, SQLite, PostgreSQL.
+              Programming languages/frameworks and technologies that I’ve used in previous projects:  Java (AndEngine), C, C++ (Cocos2dx), Ruby (Sinatra), Python, Clojure, F#, PHP, Lua (Corona), C# (Xamarin), Javascript/Typescript, Scala (Play), MongoDB, Firebase, MySQL, SQLite, PostgreSQL.
             </span>
           </Col>
         </Row>
