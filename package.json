@@ -58,7 +58,7 @@
     "bootstrap": "3.3.7",
     "font-awesome": "4.7.0",
     "modern-normalize": "0.6.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "prismjs": "1.18.0",
     "react-helmet": "5.2.1"
   },
